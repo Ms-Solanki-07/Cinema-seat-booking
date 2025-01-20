@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #1ea8ba, #5c54b3);
+    color: #fff;
+}
+
+.admin-container {
+    width: 80%;
+    max-width: 900px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header button {
+    padding: 10px 15px;
+    background: #5c54b3;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+header button:hover {
+    background: #1ea8ba;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background: #1ea8ba;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button-container button:hover {
+    background: #5c54b3;
+    transform: scale(1.05);
+}
+
+.button-container button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    main h2 {
+        font-size: 1.2rem;
+    }
+
+    .button-container button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header button {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+    }
+
+    .button-container button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}

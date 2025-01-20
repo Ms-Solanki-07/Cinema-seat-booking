@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #1ea8ba, #5c54b3);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container
+{
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+h2
+{
+    color: #ffff;
+    font-size: 2em;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.form-group
+{
+    position: relative;
+    width: 330px;
+    margin: 30px 0;
+    border-bottom: 3px solid #ffff;
+}
+
+.form-group input
+{
+    width: 100%;
+    height: 50px;
+    padding: 0 35px 0 10px;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.form-group label
+{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    color: #fff;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label {
+    top: -4px;
+    left: 10px;
+    font-size: 1rem; 
+}
+
+.form-group i
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #ffff;
+    font-size: 1.2em;
+} 
+
+p
+{
+    text-align: center;
+    color: #fff;
+    margin: 10px 0px;
+}
+
+p>a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+p>a:hover
+{
+    color: #cf9d9d;
+}
+
+#btn
+{    
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#btn:hover
+{
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust the width to fit smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Reduce font size for headings */
+    }
+
+    .form-group {
+        width: 100%; /* Make form fields span full width */
+    }
+
+    .form-group input {
+        font-size: 1em; /* Adjust font size for readability */
+        height: 45px; /* Slightly smaller height */
+    }
+
+    .form-group label {
+        font-size: 1em; /* Reduce label size */
+    }
+
+    .form-group i {
+        font-size: 1em; /* Adjust icon size */
+    }
+
+    p {
+        font-size: 0.9em; /* Smaller font size for paragraph */
+    }
+
+    #btn {
+        height: 45px; /* Adjust button size */
+        font-size: 1.2em; /* Slightly smaller font */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Further reduce width for very small devices */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.2em; /* Reduce heading size further */
+    }
+
+    .form-group input {
+        font-size: 0.9em;
+        height: 40px;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+    }
+
+    .form-group i {
+        font-size: 0.9em;
+    }
+
+    #btn {
+        font-size: 1em;
+        height: 40px;
+    }
+}
+
+.form-group i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.form-group i:hover {
+    color: #cf9d9d;
+}

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 const { PDFDocument } = require('pdf-lib');
@@ -10,14 +11,18 @@ const PORT = process.env.PORT || 3000;
 
 const { rgb } = require('pdf-lib');
 
-// Middleware to parse incoming JSON payloads
+// Middleware  
 app.use(express.json());
-
-// Middleware to parse URL-encoded data (optional, for form submissions)
-app.use(express.urlencoded({ extended: true }));
-
-// Middleware to serve static files
+app.use(cors({
+    origin: ['https://cinema-seat-booking.onrender.com', 'http://localhost:3000'],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+})); 
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Preflight Requests
+app.options('*', cors());
 
 // API endpoint to generate the ticket
 app.post('/generate-ticket', async (req, res) => {

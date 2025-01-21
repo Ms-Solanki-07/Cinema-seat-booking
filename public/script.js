@@ -164,12 +164,9 @@ function generateTicket() {
 
     // console.log('HELLO',{ fullName, mobileNumber, email, seatNumbers, totalCost, selectedMovie: selectedMovie.name }); // Debugging
 
-    const apiUrl = {
-        render: 'https://cinema-seat-booking.onrender.com/generate-ticket',
-        local: 'http://localhost:3000/generate-ticket'
-      };
+    const apiUrl =  'https://cinema-seat-booking.onrender.com/generate-ticket';
 
-    fetch(apiUrl.render || apiUrl.local, {
+    fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

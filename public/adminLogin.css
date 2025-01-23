@@ -28,9 +28,16 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    position: relative  ;
 
     border-radius: 20px;
     border: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+.back-arrow{
+    position: absolute;
+    top: 14px;
+    left: 14px;
 }
 
 h2
@@ -131,50 +138,50 @@ p>a:hover
 
 @media (max-width: 768px) {
     .container {
-        width: 90%; /* Adjust the width to fit smaller screens */
-        height: auto; /* Allow height to adjust dynamically */
+        width: 90%;  
+        height: auto; 
         padding: 20px;
     }
 
     h2 {
-        font-size: 1.5em; /* Reduce font size for headings */
+        font-size: 1.5em;  
     }
 
     .form-group {
-        width: 100%; /* Make form fields span full width */
+        width: 100%;  
     }
 
     .form-group input {
-        font-size: 1em; /* Adjust font size for readability */
-        height: 45px; /* Slightly smaller height */
+        font-size: 1em;  
+        height: 45px; 
     }
 
     .form-group label {
-        font-size: 1em; /* Reduce label size */
+        font-size: 1em; 
     }
 
     .form-group i {
-        font-size: 1em; /* Adjust icon size */
+        font-size: 1em; 
     }
 
     p {
-        font-size: 0.9em; /* Smaller font size for paragraph */
+        font-size: 0.9em;  
     }
 
     #btn {
-        height: 45px; /* Adjust button size */
-        font-size: 1.2em; /* Slightly smaller font */
+        height: 45px;  
+        font-size: 1.2em;  
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 95%; /* Further reduce width for very small devices */
+        width: 95%;  
         padding: 15px;
     }
 
     h2 {
-        font-size: 1.2em; /* Reduce heading size further */
+        font-size: 1.2em;  
     }
 
     .form-group input {

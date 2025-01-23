@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="adminPanel.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
+    <div class="back-arrow">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" fill="rgba(248,245,245,1)">
+            <path
+                d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z">
+            </path>
+        </svg>
+    </div>
     <div class="admin-container">
         <header>
             <h1>Welcome, Admin</h1>
@@ -25,8 +35,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>  
-    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <script src="script.js"></script>
     <script>
         toastr.options = {
@@ -50,12 +60,16 @@
             window.location.href = 'adminLogin.html'; // Redirect to login page if not logged in
         }
 
-       function logout() {
+        function logout() {
             alert('You have been logged out.');
             sessionStorage.removeItem('isLoggedIn'); // Remove login state
             window.location.href = 'adminLogin.html'; // Redirect to login page
         }
         toastr.success("Login Successful!", "Success");
+
+        document.querySelector(".back-arrow").addEventListener("click", () => {
+            logout();
+        })
     </script>
-</body>
+</body> 
 </html>

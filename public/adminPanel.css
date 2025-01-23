@@ -24,6 +24,11 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
 }
+.back-arrow{
+    position: absolute;
+    top: 12px;
+    left: 12px;  
+}
 
 header {
     display: flex;

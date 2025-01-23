@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="adminLogin.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
@@ -12,10 +13,13 @@
 <body>
      
     <div class="container">
+        <div class="back-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="rgba(248,245,245,1)"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"></path></svg>      
+        </div>
+
         <h2>Admin Login</h2>
 
         <form action="">
-            
             <div class="form-group">
                 <input type="email" id="email" placeholder="" required>
                 <label for="email">Email</label>
@@ -78,21 +82,25 @@
         }
 
         document.querySelector('form').addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form submission
+            e.preventDefault(); // Prevent form submission
 
-        const emailInput = document.getElementById('email').value.trim();
-        const passwordInput = document.getElementById('password').value.trim();
+            const emailInput = document.getElementById('email').value.trim();
+            const passwordInput = document.getElementById('password').value.trim();
 
-        // Check if email and password match the required credentials
-        if (emailInput === 'mssolanki9166@gmail.com' && passwordInput === 'hello') { 
-            toastr.success("Login Successful!", "Success");
-            sessionStorage.setItem('isLoggedIn', 'true');
-            // Redirect or perform desired actions after successful login
-            window.location.href = 'adminPanel.html'; // Example redirect
-        } else { 
-            toastr.error("Invalid email or password. Please try again.", "Error");
-        }
+            // Check if email and password match the required credentials
+            if (emailInput === 'mssolanki9166@gmail.com' && passwordInput === 'hello') { 
+                toastr.success("Login Successful!", "Success");
+                sessionStorage.setItem('isLoggedIn', 'true');
+                // Redirect or perform desired actions after successful login
+                window.location.href = 'adminPanel.html'; // Example redirect
+            } else { 
+                toastr.error("Invalid email or password. Please try again.", "Error");
+            }
         });
+
+        document.querySelector(".back-arrow").addEventListener("click", ()=>{
+            window.location.href = 'index.html';
+        })
 
     </script>
     

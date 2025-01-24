@@ -1,5 +1,5 @@
 <p align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="80px" fill="#FFFFFF"> <path d="M382-346.67 653.33-520 382-693.33v346.66ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z"/> </svg>
+  <svg height="80px" viewBox="0 -960 960 960" width="80px" fill="#FFFFFF"> <path d="M382-346.67 653.33-520 382-693.33v346.66ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z"/> </svg>
 </p>
 
 <h2 align="center"><b>Cinema Seat Booking System</b></h2> 
@@ -26,13 +26,15 @@ This project aims to replicate the functionality of an offline cinema seat booki
 
 <b>Key Features:</b>
 
-- Interactive seat selection.
+- <b>Automated Ticket Collection:</b> Acts as a self-service system where users can collect their tickets from a kiosk or machine outside the cinema, similar to an ATM.
 
-- Real-time price calculation.
+- <b>Email Integration:</b> Sends tickets directly to users via email, reducing the need for physical tickets and ensuring easy access.
 
-- Responsive design for seamless use on different devices.
+- <b>Queue-Free Experience:</b> Eliminates the need to stand in long lines at ticket counters, saving time and improving customer satisfaction.
 
-- Dynamic ticket generation with user details and sending tickets to users via email.
+- <b>Real-Time Booking</b> Updates: Ensures instant confirmation of bookings and provides clear instructions for ticket collection.
+
+- <b>Environment-Friendly:</b> Encourages digital tickets, reducing the use of paper and contributing to sustainability.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
